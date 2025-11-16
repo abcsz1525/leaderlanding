@@ -1,0 +1,356 @@
+:root {
+    --bg: #f6f8ff;
+    --white: #ffffff;
+    --primary: #5c6ac4;
+    --accent: #8ab6f9;
+    --text: #1d1f2c;
+    --muted: #6b6f82;
+    --shadow: 0 20px 40px rgba(92, 106, 196, 0.15);
+    font-family: 'Manrope', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+main {
+    padding-top: 90px;
+}
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 5vw;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 20px rgba(16, 41, 110, 0.1);
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.main-nav {
+    display: flex;
+    gap: 18px;
+    font-size: 0.95rem;
+}
+
+.main-nav a {
+    color: var(--muted);
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: var(--primary);
+}
+
+.cta-button,
+.btn {
+    border: none;
+    border-radius: 999px;
+    padding: 12px 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-button,
+.btn.primary {
+    background: linear-gradient(120deg, #5c6ac4, #8ab6f9);
+    color: #fff;
+    box-shadow: var(--shadow);
+}
+
+.btn.secondary {
+    border: 1px solid rgba(92, 106, 196, 0.4);
+    color: var(--primary);
+    padding: 12px 24px;
+    border-radius: 999px;
+}
+
+.btn:hover,
+.cta-button:hover {
+    transform: translateY(-2px);
+}
+
+section {
+    padding: 80px 5vw;
+}
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    background: radial-gradient(circle at top right, rgba(92, 106, 196, 0.2), transparent 60%),
+                radial-gradient(circle at bottom left, rgba(138, 182, 249, 0.25), transparent 55%),
+                #fdfdff;
+}
+
+.hero-content {
+    max-width: 760px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 32px;
+    box-shadow: var(--shadow);
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--muted);
+}
+
+blockquote {
+    font-style: italic;
+    color: var(--primary);
+    margin: 24px 0;
+    font-weight: 600;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.card,
+.case-column,
+.format-card,
+.stage-grid article,
+.card-grid article,
+.voices article,
+.number-card,
+.timeline li,
+.activities,
+.offerings article {
+    background: var(--white);
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: var(--shadow);
+}
+
+.what-we-do .section-heading,
+.what-we-do .subheading,
+.concept,
+.methods,
+.key-idea,
+.results,
+.offerings,
+.why,
+.voices,
+.process,
+.investment,
+.final-cta,
+.contacts {
+    background: linear-gradient(135deg, #ffffff 0%, #f2f6ff 100%);
+    border-radius: 32px;
+    box-shadow: var(--shadow);
+}
+
+.section-heading h2,
+.goals h2,
+.formats h2,
+.stages h2,
+.methods h2,
+.key-idea h2,
+.results h2,
+.offerings h2,
+.voices h2,
+.process h2,
+.investment h2,
+.final-cta h2,
+.contacts h2 {
+    margin-bottom: 16px;
+}
+
+.goal-list {
+    list-style: none;
+    display: grid;
+    gap: 12px;
+}
+
+.goal-list li::before {
+    content: '•';
+    color: var(--primary);
+    margin-right: 8px;
+}
+
+.case {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    align-items: stretch;
+}
+
+.case ul {
+    margin: 16px 0;
+    padding-left: 20px;
+}
+
+.highlight {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.card-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.stage-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.method-list {
+    display: grid;
+    gap: 12px;
+    list-style: none;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.activities ul {
+    list-style: none;
+    display: grid;
+    gap: 8px;
+}
+
+.key-idea .accent {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.why {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    align-items: center;
+}
+
+.number-card {
+    text-align: center;
+}
+
+.number-card span {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.voices .author {
+    margin-top: 16px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.timeline {
+    list-style: none;
+    counter-reset: step;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.timeline li::before {
+    counter-increment: step;
+    content: counter(step);
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.final-cta ul,
+.investment ul {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-weight: 600;
+    color: var(--muted);
+}
+
+.contacts {
+    text-align: center;
+}
+
+.contacts a {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .site-header {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content {
+        padding: 28px;
+    }
+
+    .btn,
+    .cta-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    section {
+        padding: 60px 6vw;
+    }
+}
